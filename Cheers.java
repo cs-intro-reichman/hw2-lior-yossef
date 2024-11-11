@@ -11,7 +11,7 @@ public class Cheers {
 
                 while (index < str.length()) {
                         char character = str.charAt(index);
-                        System.out.println("Give me " + (anChars.indexOf(character) != -1 ? "an  " : "a  ") + character + ": " + character + "!");
+                        System.out.println("Give me " + (anChars.indexOf(character) != -1 ? "an " : "a  ") + character + ": " + character + "!");
                         index++;
                 }
 
