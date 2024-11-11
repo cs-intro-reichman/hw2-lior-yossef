@@ -15,7 +15,7 @@ public class Cheers {
                         index++;
                 }
 
-                System.out.println("What does that spell?");
+                System.out.print("What does that spell?\n");
 
                 while (printCount < printLimit) {
                         System.out.println(str + "!!!");
