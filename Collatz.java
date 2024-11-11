@@ -9,21 +9,20 @@ public class Collatz {
 		while (loopCount <= seed) {
 			int num = loopCount;
 			int stepsCount = 1;
-			if (mode.equals("v")) {
-				System.out.print(num + " ");
-			}
 			if (num == 1) {
+				System.out.print(num + " ");
 				num = num * 3 + 1;
+				stepsCount++;
 			}
 			while (num != 1) {
-				num = num % 2 == 0 ? num / 2 : num * 3 + 1;
-				stepsCount++;
 				if (mode.equals("v")) {
 					System.out.print(num + " ");
 				}
+				num = num % 2 == 0 ? num / 2 : num * 3 + 1;
+				stepsCount++;
 			}
 			if (mode.equals("v")) {
-				System.out.print("(" + stepsCount + ")\n");
+				System.out.print(num + " (" + stepsCount + ")\n");
 			}
 			loopCount++;
 
