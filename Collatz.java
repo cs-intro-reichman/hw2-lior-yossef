@@ -22,6 +22,9 @@ public class Collatz {
 			}
 
 			str += num + " (" + stepsCount + ")";
+			if (i != seed) {
+				str += "\n";
+			}
 		}
 
 		if (mode.equals("v")) {
