@@ -3,32 +3,24 @@ public class Collatz {
 	public static void main(String args[]) {
 		int seed = Integer.parseInt(args[0]);
 		String mode = args[1];
-		String str = "";
+		String stepsStr;
 
 		for (int i = 1; i <= seed; i++) {
 			int num = i;
 			int stepsCount = 1;
+			stepsStr = "";
 
-			if (num == 1) {
-				str += num + " ";
-				num = num * 3 + 1;
-				stepsCount++;
-			}
-
-			while (num != 1) {
-				str += num + " ";
+			do {
+				stepsStr += num + " ";
 				num = num % 2 == 0 ? num / 2 : num * 3 + 1;
 				stepsCount++;
-			}
+			} while (num != 1);
 
-			str += num + " (" + stepsCount + ")";
-			if (i != seed) {
-				str += "\n";
-			}
-		}
+			stepsStr += num + " (" + stepsCount + ")";
 
-		if (mode.equals("v")) {
-			System.out.println(str);
+			if (mode.equals("v")) {
+				System.out.println(stepsStr);
+			}
 		}
 
 		System.out.println("Every one of the first " + seed + " hailstone sequences reached 1.");
